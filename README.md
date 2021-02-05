@@ -1,24 +1,26 @@
-# README
+# Приложение test-guru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Список сущностей:
 
-Things you may want to cover:
+1. Пользователь
 
-* Ruby version
+2. Тест
 
-* System dependencies
+3. Вопрос
 
-* Configuration
+4. Ответ
 
-* Database creation
+5. Результат теста
 
-* Database initialization
+Основные возможности:
 
-* How to run the test suite
+* Создание и управление тестами
 
-* Services (job queues, cache servers, search engines, etc.)
+* Аутентификация пользователей
 
-* Deployment instructions
+* Базовое разграничение прав доступа
 
-* ...
+* Выполнение тестов
+
+* Публикация результатов в социальных сетях
+
