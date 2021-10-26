@@ -1,10 +1,7 @@
 class Test < ApplicationRecord
   belongs_to :category
-  belongs_to :author, class_name: "User", foreign_key: "user_id"
-  has_many :questions, dependent: :destroy
 
-
-  def desc_category_title
-    category.order(title: :desc).pluck(:title)
+  def self.desc_category_title(category_title)
+  	joins("INNER JOIN categories ON tests.category_id = categories.id").where(categories: {title: category_title}).order(title: :desc).pluck(:title)
   end
 end
