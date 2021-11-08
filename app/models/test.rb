@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
   belongs_to :category
-  has_many :qustions
-  has_many :user
+  has_many :questions
+  has_many :users, through: :user_tests
   belongs_to :author, class_name: "User", foreign_key: "user_id"
 
   def self.desc_category_title(category_title)
