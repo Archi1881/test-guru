@@ -1,7 +1,6 @@
-class TestsContoller < ApplicationController
+class TestsController < ApplicationController
 
-    def index
-      byebug  
-     render plain: 'All tests'
+    def index 
+      render plain: 'All tests'
     end
 end
