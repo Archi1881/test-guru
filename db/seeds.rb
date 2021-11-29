@@ -5,21 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+users = User.create([
+  {name: 'Artur', email: 'art.test@gmail.com'}
+  ])
+
 categories = Category.create!([
   {title: 'Frontend'},
   {title: 'Backend'}
   ])
 
-tests = Test.create([
-  {title: 'Ruby', level: 0, category_id: categories[1].id},
-  {title: 'HTML', level: 0, category_id: categories[1].id},
-  {title: 'JS', level: 0, category_id: categories[1].id},
-  {title: 'Ruby', level: 1, category_id: categories[0].id},
-  {title: 'HTML', level: 1, category_id: categories[0].id},
-  {title: 'JS', level: 1, category_id: categories[0].id},
-  {title: 'Ruby', level: 2, category_id: categories[0].id},
-  {title: 'HTML', level: 2, category_id: categories[0].id},
-  {title: 'JS', level: 2, category_id: categories[0].id}
+tests = Test.create!([
+  {title: 'Ruby', level: 0, category_id: categories[1].id, user_id: users[0].id},
+  {title: 'HTML', level: 0, category_id: categories[1].id, user_id: users[0].id},
+  {title: 'JS', level: 0, category_id: categories[1].id, user_id: users[0].id},
+  {title: 'Ruby', level: 1, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'HTML', level: 1, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'JS', level: 1, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'Ruby', level: 2, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'HTML', level: 2, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'JS', level: 2, category_id: categories[0].id, user_id: users[0].id}
   ])
 
 questions = Question.create([
@@ -64,6 +68,4 @@ answers = Answer.create([
   {body: '1 answer for Ninth question', question_id: questions[8].id}
   ])
 
-users = User.create([
-  {name: 'Artur', email: 'art.test@gmail.com'}
-  ])
+
