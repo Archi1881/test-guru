@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
-    if @question.destroy
+    if @question.update(question_params)
       redirect_to admin_test_path(question.test)
     else
       render :edit
