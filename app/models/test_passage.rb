@@ -6,6 +6,14 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  def successfull_test?
+    test_result_in_percent >= 85
+  end
+
+  def test_result_in_percent
+    correct_questions * 100 / questions_number
+  end
+
   def completed?
     current_question.nil?
   end
@@ -17,6 +25,14 @@ class TestPassage < ApplicationRecord
 
     self.current_question = next_question
     save!
+  end
+
+  def current_question_number
+    questions_number - next_questions.count
+  end
+
+  def questions_number
+    test.questions.count
   end
 
   private
