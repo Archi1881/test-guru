@@ -1,0 +1,9 @@
+<h1> The <%= @test_passage.test.title %> Test was Completed!</h1>
+
+<h2>You answered <%= result_color(@test_passage.score) %> questions correctly</h2>
+
+<% if @test_passage.score_positive?  %>
+  <h2 style='color: green'>Test successfully passed!</h2>
+<% else %>
+  <h2 style='color: red'>Test failed!</h2>
+<% end %>
