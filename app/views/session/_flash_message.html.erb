@@ -1,0 +1,4 @@
+<h1><%=flash_message %></h1>
+  <% if flash[:alert] %>
+    <%= content_tag :p, flash[:alert], class: 'flash alert' %>
+  <% end %>

@@ -1,0 +1,10 @@
+<% if logged_in? %>
+ 
+<h2>    <% = link_to 'Test Guru App ', root_path %>Welcome, #{current_user.name} Guru | #{link_to 'Logout', :logout, method: :delete} %></h2>
+
+<% else %>
+
+  <h2><%= link_to 'Registration', :signup %></h2>    | 
+  <h2><%= link_to 'Login', :login %></h2><br>
+
+<% end %>
