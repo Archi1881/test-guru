@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: "Test"
 
   validates :name, :email, presence: true 
-  validates :email, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
-  validates :email, uniqueness: true
+  validates :email, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/, uniqueness: true 
 
   has_secure_password
     
