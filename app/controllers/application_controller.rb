@@ -22,9 +22,4 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user.present?
   end
-
-  def request_url
-    cookies[:request_url] = request.url
-  end
-
 end
