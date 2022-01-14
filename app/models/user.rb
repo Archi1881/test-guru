@@ -17,6 +17,9 @@ class User < ApplicationRecord
   def test_passage(test)
     test_passages.find_by(test_id: test.id)
   end
+  
+  def admin?
+    is_a?(Admin)
+  end
 
-	
 end
