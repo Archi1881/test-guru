@@ -23,7 +23,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to admin_test_path(@question.test)
+      redirect_to admin_test_path(@question.test), success: t('.update_success')
     else
       render :edit
     end

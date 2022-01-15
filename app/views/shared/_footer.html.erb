@@ -1,7 +1,30 @@
-<p><%= current_date %></p>
+<footer class="footer"
+  <p>
+  <ul>
+    <li>
+      <strong><%= t('.year') %></strong>
+      <p><%= current_date %></p>
+    </li>
 
-<p>Автор: Артур Мунаварович</p>
+    <li>
+    <strong><%= t('.author') %></strong>
+    <p>Автор: Артур Мунаварович</p>
+    </li>
 
-<p>'Приложение Test Guru' <%= github_url('Archi1881', 'test-guru') %></p>
+    <li>
+    <strong><%= t('.git') %></strong>
+    <%= github_url('Archi1881', 'test-guru') %>
+    </li>
 
-<p><%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: :blank %></p>
+    <li>
+    <strong><%= t('.link') %></strong>
+    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: :blank %>
+    </li>
+  </ul>
+  </p>
+</footer>
+
+
+<p>'Приложение Test Guru' </p>
+
+<p></p>

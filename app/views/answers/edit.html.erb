@@ -1,8 +1,8 @@
-<h1>Editing Answer</h1>
+<h1><%= t('.edit') %></h1>
 
 <p>
   <%= @question.body %>
 </p
 
-<%= render 'form' %>
-<%= link_to 'Back', question_path(@answer.question) %>
+<%= render 'form', answer: @answer%>
+<%= link_to t('helpers.back'), question_path(@answer.question) %>
