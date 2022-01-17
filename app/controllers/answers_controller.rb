@@ -22,7 +22,7 @@ class Admin::AnswersController < Admin::BaseController
   
   def update
     if @answer.update(answer_params)
-      redirect_to admin_question_answer_path
+      redirect_to admin_question_answer_path, success: t('.update_success')
     else
       render :edit      
     end

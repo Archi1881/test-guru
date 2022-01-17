@@ -1,9 +1,9 @@
 <li>
     <%= answer.body %><br> |
-    <%= link_to 'Show', answer_path(answer) %>
-    <%= link_to 'Edit', edit_answer_path(answer) %>
-    <%= link_to 'Delete',
+    <%= link_to t('helpers.edit'), admin_answer_path(answer) %> |
+    <%= link_to t('helpers.back'), edit_admin_answer_path(answer) %> |
+    <%= link_to t('helpers.delete'),
                 answer_path(answer),
                 method: :delete,
-                data:   {confirm: 'Are you sure?'} %>
+                data:   {confirm: t('helpers.delete_confirmation')} %>
 </li>           

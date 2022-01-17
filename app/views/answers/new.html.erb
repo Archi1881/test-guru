@@ -1,4 +1,4 @@
-<h1>New Answer</h1>
+<h1><%= t('.header') %></h1>
 
 <p>
   <%= @question.body %>
@@ -6,4 +6,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', question_path(@question) %>
+<%= link_to t('helpers.back'), question_path(@question) %>
