@@ -14,8 +14,8 @@ module ApplicationHelper
     link_to 'GitHub', "https://github.com/#{nickname}/#{repository}", target: :blank
   end
 
-  def flash_messages
-    content_tag :div, flash[type] ,class: "alert #{FLASH_TYPES.fetch(type.to_sym, type)}"
+  def flash_messages(type)
+    content_tag :div, flash[type] ,class: "alert #{FLASH_TYPES.fetch(type.to_sym, type)}" if flash[:type]
   end
 end
  
