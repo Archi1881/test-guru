@@ -134,6 +134,9 @@ en:
       current_question: "Current question: %{number}"
       of: "of"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occerred while saving gist"
 
   tests_mailer:
     completed_test:
@@ -151,3 +154,7 @@ en:
         header: "Enter the Guru Gates"
         password: "Password"
         remember_me: "Remember me"
+  gists:
+    create:
+      success: "Good!"
+      failure: "Error"

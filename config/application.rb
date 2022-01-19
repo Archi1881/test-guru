@@ -6,6 +6,8 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
 module TestGuru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -20,5 +22,6 @@ module TestGuru
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.i18n.default_locale = :ru
+    config.autoload_paths << "#{Rails.root}/lib/clients"
   end
 end

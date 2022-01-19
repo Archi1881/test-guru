@@ -136,6 +136,9 @@ ru:
       current_question: "Номер текущего вопроса: %{number}"
       of: "из"
       next: "Следующий"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   tests_mailer:
     completed_test:
@@ -154,3 +157,7 @@ ru:
         email: "Почта"
         password: "Пароль"
         remember_me: "Запомнить меня" 
+  gists:
+    create:
+      success: "Гист успешно сохранен"
+      failure: "Ошибка"    
