@@ -22,7 +22,7 @@ class TestPassagesController < ApplicationController
 
   def gist
     
-    response = GistQuestionService.new(@test_passage.current_question)
+    service = GistQuestionService.new(@test_passage.current_question)
     result = response.call
     @gist = current_user.gists.new(gist_url: result.html_url, user_id: current_user.id, question_id: @test_passage.current_question.id)
     
