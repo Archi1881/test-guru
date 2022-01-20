@@ -1,9 +1,0 @@
-<h1><%= <%= t('.question') %></h1>
-<p><%= @question.body %></p>
-
-<h2>Answers</h2>
-<%= link_to t('.new_answer'), new_test_question_path(@question) %>
-
-<%= link_to t('helpers.edit'), edit_admin_question_path(@question) %>
-
-<%= link_to t('helpers.back'), admin_test_path(@question.test) %>
