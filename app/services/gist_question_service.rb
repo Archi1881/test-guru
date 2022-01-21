@@ -11,7 +11,7 @@ class GistQuestionService
   end
 
   def success?
-    @client.last_service.status <= 209 && @client.last_service.status >= 200
+    @client.last_response.data[:html_url].present?
   end
 
   private
