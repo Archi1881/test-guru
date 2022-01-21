@@ -1,4 +1,4 @@
-<h1><%= <%= t('.question') %></h1>
+<h1><%= t('.question') %></h1>
 <p><%= @question.body %></p>
 
 <h2>Answers</h2>
@@ -6,15 +6,3 @@
 <ol>
   <%= render @question.answers %>
 </ol>
-
-# <p>
-#   <%= link_to t('.new_answer'), new_test_question_path(@question) %>
-# </p>
-
-# <p>
-#   <%= link_to t('helpers.edit'), edit_admin_question_path(@question) %>
-# </p>
-
-# <p>
-#   <%= link_to t('helpers.back'), admin_test_path(@question.test) %>
-# </p>

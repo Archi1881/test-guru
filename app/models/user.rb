@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: "Test"
   has_many :gists, dependent: :destroy
 
-  validates :name, :email, presence: true 
+  validates :email, presence: true 
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true 
     
   def test_passage(test)

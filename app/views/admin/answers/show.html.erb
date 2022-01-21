@@ -11,12 +11,12 @@
 
 <p>
   <b><%= t('.correct') %></b>
-  <%= @answers.correct %>
+  <%= @answer.correct %>
 </p>
 
 <%= link_to t('helpers.back'), admin_question_path(@answer.question) %>
 
-<%= link_to 'New answer', new_question_answer_path(@question) %>
+<%= link_to 'New answer', new_admin_question_answer_path(@question.answer) %>
 
 <ol>
   <%= render @question.answers %>

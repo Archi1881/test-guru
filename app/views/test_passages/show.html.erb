@@ -5,7 +5,8 @@
 </p>
 
 <b>
-  <%= t('.current_question', id: @test_passage.current_question_id %> <%= t('.of') %>  <%= t('.total_questions', count: @test_passage.test.questions.count %>
+  <%= t('.current_question', number: @test_passage.current_question_id) %> 
+  <%= t('.total_questions', count: @test_passage.test.questions.count) %>
 </b>
 
 <b>
@@ -20,8 +21,8 @@
       <%= b.check_box id: "answer_ids_#{b.object.id}" %>
       <%= b.label %>
     </p>
-  <% end%>
+  <% end %>
   
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
   <p><%= form.submit t('.next') %></p>
-<% end%>
+<% end %>
