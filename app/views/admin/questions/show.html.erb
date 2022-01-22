@@ -1,0 +1,8 @@
+<h1><%= t('.question') %></h1>
+<p><%= @question.body %></p>
+
+<h2>Answers</h2>
+
+<ol>
+  <%= render @question.answers %>
+</ol>

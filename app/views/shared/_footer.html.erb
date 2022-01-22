@@ -2,27 +2,28 @@
   <div class="navbar-inner">
     <div class="container">
       <p>
-      <ul>
-        <li>
-          <strong><%= t('.year') %></strong>
-          <%= current_year %>
-        </li>
-        
-        <li>
-          <strong><%= t('.author') %></strong>
-          Гилимзянов Артур Мунаварович
-        </li>
+        <ul>
+          <li>
+            <strong><%= t('.year') %></strong>
+            <%= current_date %>
+          </li>
+          
+          <li>
+            <strong><%= t('.author') %></strong>
+            Гилимзянов Артур Мунаварович
+          </li>
 
-        <li>
-          <strong><%= t('.git') %></strong>
-          <%= github_url('Archi1881', 'test-guru') %>
-        </li>
+          <li>
+            <strong><%= t('.git') %></strong>
+            <%= github_url('Archi1881', 'test-guru') %>
+          </li>
 
-        <li>
-        <strong><%= t('.link') %></strong>
-        <%= link_to 'Учебный проект в онлайн - школе Thinknetica', 'https://thinknetica.com', target: '_blank' %>
-        </li>
-      </ul>
+          <li>
+            <strong><%= t('.link') %></strong>
+            <%= link_to 'Учебный проект в онлайн - школе Thinknetica', 'https://thinknetica.com', target: '_blank' %>
+          </li>
+        </ul>
+      </p>
     </div>
   </div>
 </div> 

@@ -1,4 +1,4 @@
-<h2>Test <%= @test.title %> have <%= 'question'.pluralize(@test.questions.count) %></h2>
+<h2> Test <%= @test.title %> have <%= 'question'.pluralize(@test.questions.count) %></h2>
 <p>
   <strong><%= t('.title') %></strong>
   <%= @test.title %>
@@ -10,19 +10,10 @@
 </p>
 
 <p>
-  <% @test_questions.each do |question| %>
-    <li>
-      <%= question.body %>
-    </li>
-  <% end %>
-</p>
-
-<p>
-<h2><%= t('.questions') %></h2>
-
-  <ol>
+  <h2> <%= t('.questions') %></h2>
+  <table>
     <%= render partial: 'admin/questions/question', collection: @test.questions %>
-  </ol>
+  </table>
 </p>
 
 <%= link_to t('helpers.edit'), edit_admin_test_path(@test) %>
