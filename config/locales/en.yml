@@ -73,6 +73,8 @@ en:
         level: "Level"
         count: "Count"
         actions: "Actions"
+      form_inline:
+        submit: "OK"
       create:
         success: "The test successfully created"
       update:
@@ -88,6 +90,7 @@ en:
         actions: "Actions"
       edit:
         edit: "Edit test: %{title}"
+    
     questions:
       new:
         header: "Create New Question"
