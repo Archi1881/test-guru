@@ -39,3 +39,7 @@ ru:
         question: "Вопрос"
         gist_url: "Hash Gist"
         user: "email пользователя"
+    tests:
+      form_inline:
+        submit: "Ok" 
+    

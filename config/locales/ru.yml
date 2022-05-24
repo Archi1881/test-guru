@@ -77,6 +77,8 @@ ru:
         level: "Уровень"
         count: "Количество вопросов"
         actions: "Действия"
+      form_inline:
+        submit: "OK"      
       create:
         success: "Тест успешно создан"
       update:
@@ -92,6 +94,7 @@ ru:
         actions: "Действия"
       edit:
         edit: "Редактировать тест: %{title}"
+    
     questions:
       new:
         header: "Создать новый вопрос"

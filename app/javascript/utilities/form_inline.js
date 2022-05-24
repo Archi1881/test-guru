@@ -1,37 +1,47 @@
 document.addEventListener("turbolinks:load", function () {
 
-    $(".form-inline-link").on("click", formInlineLinkHandler);
+    let controls = document.querySelectorAll('.form-inline-link')
   
-    var errors = document.querySelector(".resource-errors");
-  
+    if (controls.length) {
+      for (let i = 0; i < controls.length; i++) {
+          controls[i].addEventListener('click', formInlineLinkHandler)
+      }
+    }
+
+
+    let errors = document.querySelector(".resource-errors");
+
     if (errors && controls.length) {
-        var resourceId = errors.dataset.resourceId;
+        let resourceId = errors.dataset.resourceId;
         formInlineHandler(resourceId);
     }
-  });
-  
-  function formInlineLinkHandler(event) {
-    event.preventDefault();
-  
-    var testId = this.dataset.testId;
-    console.log(testId);
-    formInlineHandler(testId);
-  }
-  
-  function formInlineHandler(testId) {
-    var link = document.querySelector(
-        '.form-inline-link[data-test-id="' + testId + '"]'
-    );
-  
-    var $testTitle = $('.test-title[data-test-id="' + testId + '"]');
-    var $formInline = $('.form-inline[data-test-id="' + testId + '"]');
-  
-    $formInline.toggle();
-    $testTitle.toggle();
-  
-    if ($formInline.is(":visible")) {
-        link.textContent = "Cancel";
-    } else {
-        link.textContent = "Edit";
+
+    function formInlineLinkHandler(event) {
+      event.preventDefault();
+    
+      let testId = this.dataset.testId;
+      console.log(testId);
+      formInlineHandler(testId);
     }
-  }
+    
+    function formInlineHandler(testId) {
+      let link = document.querySelector(
+          '.form-inline-link[data-test-id="' + testId + '"]'
+      );
+    
+      let testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]');
+      let formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]');
+    
+      //$formInline.toggle();
+      //$testTitle.toggle();
+    
+      if (formInline.classList.contains('hide')) {
+        testTitle.classList.add('hide')
+        formInline.classList.remove('hide')
+        link.textContent = 'Cancel'
+      } else {
+        testTitle.classList.remove('hide')
+        formInline.classList.add('hide')
+        link.textContent = 'Edit'
+      }
+}

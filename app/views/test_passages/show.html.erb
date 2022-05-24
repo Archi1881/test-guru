@@ -9,6 +9,11 @@
   <%= t('.total_questions', count: @test_passage.test.questions.count) %>
 </b>
 
+<div class="progress">
+  <div class="progress-bar bg-success" id="progress-bar" data-progress="<%= @test_passage.percent_of_progress %>" aria-valuemax="100">
+  </div>
+</div>
+
 <b>
   <%= flash_messages(:notice) %>
   <%= flash_messages(:error) %>

@@ -12,6 +12,14 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def passed?
+    result >= SUCCESS_PERCENT
+  end
+
+  def result
+    ((self.correct_questions.to_f / test.questions.count.to_f) * 100).to_i
+  end
+
   def completed?
     current_question.nil?
   end
