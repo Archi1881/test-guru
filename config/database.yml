@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: test_guru
+  database: test_guru_development
   username: postgres
 
 # Warning: The database defined as "test" will be erased and
