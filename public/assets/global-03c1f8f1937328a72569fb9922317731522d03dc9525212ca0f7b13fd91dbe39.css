@@ -1,0 +1,9 @@
+/* line 1, app/assets/stylesheets/global.scss */
+.pointer {
+  cursor: pointer;
+}
+
+/* line 5, app/assets/stylesheets/global.scss */
+.hide {
+  display: none;
+}
