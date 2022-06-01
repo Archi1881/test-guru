@@ -63,6 +63,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "test_guru_production"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = { host: 'obscure-dusk-33909.herokuapp.com' }
   config.action_mailer.smpt_settings = {
     address:              'smpt.gmail.com',
     port:                 587,
