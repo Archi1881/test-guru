@@ -28,7 +28,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update      
     if @test.update(test_params)
-      redirect_to @test, success: t('.update_success')
+      redirect_to admin_tests_path, success: t('.update_success')
     else
       render :edit
     end  
@@ -54,7 +54,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id )
+    params.require(:test).permit(:title, :level, :category_id, :completed )
   end
 
   def set_test
