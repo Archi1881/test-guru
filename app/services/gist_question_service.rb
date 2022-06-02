@@ -1,6 +1,6 @@
 class GistQuestionService
 
-  def initialize(question, client: client_octokit)
+  def initialize(question, client: default_client)
     @question = question
     @test = @question.test
     @client = client
@@ -22,7 +22,7 @@ class GistQuestionService
       description: "The question about #{@test.title} from TestGuru",      
       files: {
         'test_guru_question.txt' => {
-          content: gist_content
+          'content': gist_content
         }
       }
     }

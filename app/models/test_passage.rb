@@ -28,6 +28,12 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id <= ?', current_question.id).count
   end
 
+=begin
+  def current_question_number
+    current_question_index + 1
+  end
+=end
+
   def score
     (100 / test.questions.count).to_f * correct_questions
   end

@@ -2,7 +2,7 @@ module ApplicationHelper
   
   FLASH_TYPES = {
     notice: 'alert-info',
-    error: 'alert-danger',
+    warning: 'alert-warning',
     success: 'alert-success'
   }
   

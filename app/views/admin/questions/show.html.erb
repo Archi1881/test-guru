@@ -1,8 +1,13 @@
 <h1><%= t('.question') %></h1>
 <p><%= @question.body %></p>
 
-<h2>Answers</h2>
+<h2><%= t('.answers') %></h2>
+
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol>
+
+<%= link_to t('helpers.edit'), edit_admin_question_path(@question) %>
+<%= link_to t('helpers.back'), admin_test_path(@question.test) %>
