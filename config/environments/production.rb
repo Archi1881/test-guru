@@ -64,8 +64,8 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'obscure-dusk-33909.herokuapp.com' }
-  config.action_mailer.smpt_settings = {
-    address:              'smpt.gmail.com',
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
     port:                 587,
     user_name:            ENV['SMPT_USERNAME'],
     password:             ENV['SMPT_PASSWORD'],
