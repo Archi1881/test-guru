@@ -3,6 +3,6 @@ class ContactsMailer < ApplicationMailer
     @email = email
     @message = message
 
-    mail to: 'mail@testguru.com'
+    mail to: 'mail@archi-testguru.heroku.com'
   end
 end
