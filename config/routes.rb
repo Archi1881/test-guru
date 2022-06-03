@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :contacts, only: %i[new create]
   
   root 'tests#index'
   
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   
-  resources :test_passages, only: %i[show update] do
+  resources :test_passages, only: :create do
     member do
       get :result
       post :gist
@@ -22,7 +24,7 @@ Rails.application.routes.draw do
   end  
 
   namespace :admin do
-    resources :gists, only: %i[index]
+    resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do
