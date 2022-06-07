@@ -19,5 +19,3 @@ import  "../utilites/progress_bar"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-

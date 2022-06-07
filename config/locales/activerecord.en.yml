@@ -25,4 +25,13 @@ en:
         user: "user email"
     tests:
         form_inline:
-          submit: "Ok"      
+          submit: "Ok"
+    gists:
+      index:
+        header: "Header"
+        question: "Question"
+        gist_url: "Url"
+        user: "User"
+  feedbacks:
+    create:
+      msg_send: "Message"       

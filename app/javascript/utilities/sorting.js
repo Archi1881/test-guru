@@ -5,11 +5,11 @@ document.addEventListener('turbolinks:load', function() {
 })
 
 function sortRowsByTitle() {
-  var table = document.addEventListener('table')
+  var tbody = document.addEventListener('tbody')
 
 //NodeList
 // https://developer.mozilla.org/ru//docs/Web/API/NodeList
-  var rows = table.querySelectorAll('tr')
+  var rows = tbody.querySelectorAll('tr')
   var sortedRows = []
 
   for (var i = 1; i < row.length; i++) {
@@ -18,7 +18,7 @@ function sortRowsByTitle() {
 
   //var arrowUp = this.querySelector('.octicon-arrow-up')
 
-  if (this.querySelector('.octicon-arrow-up')..classList.contains('hide')) {
+  if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
     sortedRows.sort(compareRowsAsc)
     this.querySelector('.octicon-arrow-up').classList.remove('hide')
     this.querySelector('.octicon-arrow-down').classList.add('hide')
@@ -36,10 +36,10 @@ function sortRowsByTitle() {
   sortedTable.appendChild(rows[0])
 
   for (var i = 0; i < sortedRows.length; i++) {
-    sortedTable.appendChild(sortedRows[i])
+    sortedbody.appendChild(sortedRows[i])
   }
 
-  table.parentNode.replaceChild(sortedTable, table)
+  tbody.parentNode.replaceChild(sortedTbody, tbody)
 }
 
 function compareRowsAsc(row1, row2) {

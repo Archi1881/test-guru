@@ -20,5 +20,10 @@
     <%= form.collection_select :author_id, User.all, :id, :email, prompt: true %><br> 
   </p>
 
+  <p>
+    <%= form.label :completed %>
+    <%= form.check_box :completed, id: :test_completed %>
+  </p>
+
   <p><%= form.submit %></p>
 <% end %>  
