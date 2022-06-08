@@ -11,10 +11,15 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import  "../utilites/sorting"
-import  "../utilites/form_inline"
-import  "../utilites/checking"
-import  "../utilites/progress_bar"
+//import  "/utilites/sorting"
+//import  "/utilites/form_inline"
+//import  "/utilites/checking"
+//import  "/utilites/progress_bar"
+require("packs/sorting")
+require("packs/form_inline")
+require("packs/checking")
+require("packs/progress_bar")
+
 
 Rails.start()
 Turbolinks.start()

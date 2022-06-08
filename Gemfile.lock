@@ -131,15 +131,15 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.5.2)
-    multipart-post (2.1.1)
+    multipart-post (2.2.0)
     nio4r (2.5.8)
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    octicons (17.2.0)
-    octicons_helper (17.2.0)
+    octicons (17.3.0)
+    octicons_helper (17.3.0)
       actionview
-      octicons (= 17.2.0)
+      octicons (= 17.3.0)
       railties
     octokit (4.22.0)
       faraday (>= 0.9)
@@ -152,7 +152,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
-    rack (2.2.3)
     rack-mini-profiler (2.3.4)
       rack (>= 1.2.0)
     rack-proxy (0.7.2)
@@ -193,7 +192,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.5.0)
-    regexp_parser (2.4.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -212,15 +210,11 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    selenium-webdriver (4.2.0)
+    selenium-webdriver (4.2.1)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    selenium-webdriver (4.1.0)
-      childprocess (>= 0.5, < 5.0)
-      rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     spring (4.0.0)
     sprockets (4.0.3)
@@ -263,7 +257,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
