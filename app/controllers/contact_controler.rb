@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+class ContactController < ApplicationController
   # GET /contacts or /contacts.json
   def index
   end
