@@ -42,7 +42,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.1.3'
 gem 'octicons_helper'
-gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,9 +58,13 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring'
 
   gem 'letter_opener'
+end
+
+group :production do
+  gem 'dotenv-rails'
 end
 
 group :test do
