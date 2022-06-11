@@ -42,7 +42,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.1.3'
 gem 'octicons_helper'
-gem 'dotenv-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
