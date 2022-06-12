@@ -10,13 +10,11 @@ Rails.application.routes.draw do
   #resources :sessions, only: :create
 
   resources :tests, only: :index do
-      member do
-      post :start
-    end
+    post :start, on: :member
   end
 
   
-  resources :test_passages, only: :create do
+  resources :test_passages, only: %i[create show update] do
     member do
       get :result
       post :gist

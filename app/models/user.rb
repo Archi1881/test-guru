@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true 
     
   def test_passage(test)
-    test_passages.find_by(test_id: test.id)
+    test_passages.find_by(test: test)
   end
   
   def admin?
