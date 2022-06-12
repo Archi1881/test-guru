@@ -14,15 +14,17 @@ Rails.application.routes.draw do
   end
 
   
-  resources :test_passages, only: %i[create show update] do
+  resources :test_passages, only: %i[show update] do
     member do
       get :result
       post :gist
     end
   end  
 
+  resource :contact, only: %i[new create]
+
   namespace :admin do
-    resources :gists, only: :index
+    resources :gists, only: %i[index]
     resources :tests do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do
