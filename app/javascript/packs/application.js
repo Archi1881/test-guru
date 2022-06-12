@@ -12,11 +12,6 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-//require("packs/sorting")
-//require("packs/form_inline")
-//require("packs/checking")
-//require("packs/progress_bar")
-
 
 Rails.start()
 Turbolinks.start()
