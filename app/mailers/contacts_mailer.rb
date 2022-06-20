@@ -1,5 +1,5 @@
 class ContactsMailer < ApplicationMailer
-  def contact_form(email, message)
+  def send_contact(email, message)
     @email = email
     @message = message
 

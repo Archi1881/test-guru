@@ -11,10 +11,21 @@
   <body>
     <%= render 'admin/nav' %>
 
-    <div class="container">
-      <%= render 'shared/flash' %>
-      <%= yield %>
-      <%= render 'shared/footer' %>
+    <div class="container col-xl-12" %>
+      <% if flash.present? %>
+        < div class= "row.justify-content-center.mt-2" %>
+          <alert alert-primary alert-dismissible fade show role="alert">
+            <%= render 'shared/flash' %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true" &times>
+        </div>
+      <% end %>
     </div>
+      
+    <%= yield %>
+
+    <br>
+    <div class="row justify-content-center mt-5" %></div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

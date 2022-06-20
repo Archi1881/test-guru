@@ -1,13 +1,15 @@
 class Admin::TestsController < Admin::BaseController
   
   before_action :set_tests, only: %i[index update_inline]
-  before_action :set_test, only: %i[show edit update destroy update_inline]  
+  before_action :set_test, only: %i[show edit update destroy  start update_inline]
+  
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
   
   def index 
   end
 
   def show
-    @test_questions = @test.questions
+    @test.questions
   end
 
   def new
@@ -20,7 +22,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.created_tests.new(test_params)
 
     if @test.save
-      redirect_to admin_tests_path, success: t('.success')
+      redirect_to admin_tests_path, notice: t('.success')
     else
       render :new
     end  
@@ -54,11 +56,15 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :completed )
+    params.require(:test).permit(:title, :level, :category_id, :user_id )
   end
 
   def set_test
     @test = Test.find(params[:id])
+  end
+
+  def rescue_with_test_not_found
+    render plain: 'Test was not found'
   end
 
 end

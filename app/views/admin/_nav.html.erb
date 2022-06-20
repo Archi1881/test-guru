@@ -2,17 +2,18 @@
 
   <ul class="nav justify-content-end mt-3">
     <li class="nav-item">
-      <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+      <%= link_to 'TestGuru', admin_tests_path, class: 'navbar-brand' %>
     </li>
 
     <li class="nav-item">
-      <%= link_to t('helpers.home_page'), admin_tests_path, class: 'nav-link active' %>
+      <%= link_to t('helpers.gists'), admin_gists_path, class: 'nav-link active' %>
     </li>
     <li class="nav-item">
       <a class="nav-link active>"> <%= t('helpers.welcome') %><%= current_user.email %> Guru </a>
     </li>
     <li>
       <%= button_to t('helpers.logout'), destroy_user_session_path, method: :delete, class: 'nav-link active' %>
+      <%= octicon 'sign-out' %> 
     </li>
   </ul>
 </nav> 

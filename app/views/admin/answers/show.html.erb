@@ -16,7 +16,7 @@
 
 <%= link_to t('helpers.back'), admin_question_path(@answer.question) %>
 
-<%= link_to 'New answer', new_admin_question_answer_path(@question.answer) %>
+<%= link_to 'New answer', new_admin_question_answer_path(@question.answers) %>
 
 <ol>
   <%= render @question.answers %>

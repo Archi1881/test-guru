@@ -1,6 +1,7 @@
 <tr>
   <td class="text-center"><%= test.title %></td>
   <td class="text-center"><%= test_level(test) %></td>
-  <td class="text-center"><%= test.questions.count %></td>  
+  <td class="text-center"><%= test.questions.count %></td>
+  <td class="text-center"><%= test.author.email %></td>  
   <td class="text-center"><%= button_to t('.start'), start_test_path(test) %></td>
 </tr>

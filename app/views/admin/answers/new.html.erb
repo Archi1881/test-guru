@@ -6,4 +6,6 @@
 
 <%= render 'form' %>
 
-<%= link_to t('helpers.back'), question_path(@question) %>
+<%= link_to 'Go to Tests', admin_tests_path %>
+
+<%= link_to t('helpers.back'), admin_question_path(@question) %>

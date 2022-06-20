@@ -1,3 +1,4 @@
+<h1> = test_header(@test)</h1>
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
   <p>
@@ -12,7 +13,7 @@
 
   <p>
     <%= form.label :category_id %>:
-    <%= form.collection_select :category_id, Category.all, :id, :title, promt: true %>
+    <%= form.collection_select :category_id, category.all, :id, :title, promt: true %>
   </p>
 
   <p>
