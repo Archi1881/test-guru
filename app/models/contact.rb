@@ -1,4 +1,4 @@
-class Contact
+class Contact < ApplicationRecord
   include ActiveModel::Model
 
   attr_accessor(
