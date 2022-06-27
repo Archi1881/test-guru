@@ -1,6 +1,6 @@
 class Test < ApplicationRecord
   has_many :test_passages, dependent: :destroy
-  has_many :users, through: :test_passages
+  has_many :users, through: :test_passages, dependent: :destroy
   has_many :questions, dependent: :destroy
   belongs_to :category
   belongs_to :author, class_name: "User", foreign_key: "user_id"
@@ -17,5 +17,9 @@ class Test < ApplicationRecord
 
   def self.desc_category_title(title)
   	by_category_title(title).order(title: :desc).pluck(:title)
+  end
+
+  def completed?
+    current_question.nil?
   end
 end

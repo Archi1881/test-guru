@@ -16,10 +16,10 @@ categories = Category.create!([
   ])
 
 tests = Test.create!([
-  {title: 'Ruby', level: 0, category_id: categories[1].id, user_id: users[0].id},
-  {title: 'HTML', level: 0, category_id: categories[1].id, user_id: users[0].id},
-  {title: 'JS', level: 0, category_id: categories[1].id, user_id: users[0].id},
-  {title: 'Ruby', level: 1, category_id: categories[0].id, user_id: users[0].id},
+  {title: 'Ruby', level: 0, category_id: categories[1].id, user_id: users[0].id, completed: true},
+  {title: 'HTML', level: 0, category_id: categories[1].id, user_id: users[0].id, completed: true},
+  {title: 'JS', level: 0, category_id: categories[1].id, user_id: users[0].id, completed: true},
+  {title: 'Ruby', level: 1, category_id: categories[0].id, user_id: users[0].id, },
   {title: 'HTML', level: 1, category_id: categories[0].id, user_id: users[0].id},
   {title: 'JS', level: 1, category_id: categories[0].id, user_id: users[0].id},
   {title: 'Ruby', level: 2, category_id: categories[0].id, user_id: users[0].id},
