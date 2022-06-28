@@ -6,26 +6,13 @@ class TestsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
   
   def index 
-    @tests = Test.all
+    @tests = Test.where(completed: true)
   end
 
   def start
 
-    if @test.completed
-      current_user.tests.push(@test)
-      redirect_to current_user.test_passage(@test)
-    else
-      redirect_to root_path, warning: 'Нет доступа к тесту!'
-    end
-
-=begin
-    if @test.questions.count > 0
-      current_user.tests.push(@test)
-      redirect_to current_user.test_passage(@test)
-    else
-      redirect_to root_path, warning: 'Нет доступа к тесту!'
-    end
-=end
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   private

@@ -18,8 +18,4 @@ class Test < ApplicationRecord
   def self.desc_category_title(title)
   	by_category_title(title).order(title: :desc).pluck(:title)
   end
-
-  def completed?
-    current_question.nil?
-  end
 end
