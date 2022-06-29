@@ -1,0 +1,26 @@
+<h1><%= t('.feedback') %></h1>
+
+<%= form_with model: @contact, url: contacts_path, local: true do |f| %>
+  <%= render 'shared/errors', resource: @contact %>
+
+  <p>
+    <b><%= t('.user') %></b>
+  </p>
+  
+  <p><%= f.text_field :name, id: :contact_name %></p>
+
+  <p><b><%= t('.email') %></b></p>
+  
+  <p><%= f.text_field :email, id: :contact_email %></p>
+
+  <p>
+    <b><%= f.label t('.body') %></b>
+  </p> 
+  
+  <p><%= f.text_area :body, id: :contact_body, rows: 6, cols: 35 %></p>
+
+  <br>
+
+  <%= f.submit t('.submit') %>
+
+<% end %>

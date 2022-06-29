@@ -1,13 +1,14 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+  <%= link_to t('.contact'), new_contact_path(@contact) %>
 
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= t('helpers.welcome') %> <b><%= current_user.email %></b> Guru |
       <%= link_to t('helpers.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to t('helpers.login'), new_session_path(resource_name) %> |
-      <%= link_to t('helpers.signup'), new_registration_path(resource_name) %>
+      <%= link_to t('helpers.log_in'), new_session_path(resource_name) %> |
+      <%= link_to t('helpers.sign_up'), new_registration_path(resource_name) %>
     <% end %>
   </span>
 </nav>

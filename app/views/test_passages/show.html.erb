@@ -10,7 +10,7 @@
 </b>
 
 <div class="progress">
-  <div class="progress-bar bg-success" id="progress-bar" data-progress="<%= @test_passage.percent_of_progress %>" aria-valuemax="100">
+  <div class="progress-bar bg-success" id="progress-bar" data-progress="<%= @test_passage.score %>" aria-valuemax="100">
   </div>
 </div>
 
@@ -28,6 +28,6 @@
     </p>
   <% end %>
   
-  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
+  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: 'post' %></p>
   <p><%= form.submit t('.next') %></p>
 <% end %>

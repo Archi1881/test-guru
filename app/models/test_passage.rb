@@ -8,7 +8,9 @@ class TestPassage < ApplicationRecord
   before_validation :set_current_question
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
+    if correct_answer?(answer_ids)
+      self.correct_questions += 1
+    end
     save!
   end
 
@@ -28,8 +30,14 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id <= ?', current_question.id).count
   end
 
+=begin
+  def current_question_number
+    current_question_index + 1
+  end
+=end
+
   def score
-    (100 / test.questions.count).to_f * correct_questions
+    (correct_questions.to_f * 100) / (test.questions.size)
   end
 
   def score_positive?
@@ -45,8 +53,9 @@ class TestPassage < ApplicationRecord
   def next_question
     if new_record?
       self.current_question = test.questions.first
+      # debugger
     else
-      self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+      test.questions.order(:id).where('id > ?', current_question.id).first
     end
   end
 

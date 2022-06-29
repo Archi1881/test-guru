@@ -10,7 +10,20 @@
 </p>
 
 <p>
+<strong><%= t('.author') %></strong>
+<%= @test.author.first_name %>
+</p>
+
+<p>
+<strong><%= t('.created_date') %></strong>
+<%= @test.created_at %>
+</p>
+
+<p>
   <h2> <%= t('.questions') %></h2>
+
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+  
   <table>
     <%= render partial: 'admin/questions/question', collection: @test.questions %>
   </table>

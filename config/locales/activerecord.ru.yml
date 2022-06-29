@@ -41,5 +41,14 @@ ru:
         user: "email пользователя"
     tests:
       form_inline:
-        submit: "Ok" 
+        submit: "Ok"
+    gists:
+      index:
+        header: "Заголовок"
+        question: "Вопрос"
+        gist_url: "Путь"
+        user: "Пользователь"
+  feedbacks:
+    create:
+      msg_send: "Сообщение" 
     

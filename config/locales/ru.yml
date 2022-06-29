@@ -26,7 +26,7 @@ ru:
         body: "Введите ответ: "
         correct: "Правильный ответ: "
     signup: "Зарегистрироваться"
-    login: "Вход"
+    sign_in: "Вход"
     forgot_your_password: "Забыли пароль?"
     edit: "Редактировать"
     back: "Назад"
@@ -53,6 +53,7 @@ ru:
       year: "Год: "
       git: "Github: "
       link: "Ссылка: "
+      feedback: "Обратная связь"
     nav:
       header: "Панель пользователя TestGuru"
 
@@ -92,6 +93,7 @@ ru:
         id: "Номер"
         body: "Вопрос"
         actions: "Действия"
+        new_question: "Новый вопрос"
       edit:
         edit: "Редактировать тест: %{title}"
     

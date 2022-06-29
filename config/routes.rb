@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
   
   root 'tests#index'
   
@@ -8,21 +8,21 @@ Rails.application.routes.draw do
   #resources :sessions, only: :create
 
   resources :tests, only: :index do
-      member do
-      post :start
-    end
+    post :start, on: :member
   end
 
   
-  resources :test_passages, only: %i[show update] do
+  resources :test_passages, only: %i[create show update] do
     member do
       get :result
       post :gist
     end
-  end  
+  end
 
+  resources :contacts, only: %i[new create]
+  
   namespace :admin do
-    resources :gists, only: %i[index]
+    resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do

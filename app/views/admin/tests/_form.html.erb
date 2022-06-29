@@ -1,3 +1,4 @@
+<h1> = test_header(@test)</h1>
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
   <p>
@@ -18,6 +19,11 @@
   <p>
     <%= form.label :author_id %><br>
     <%= form.collection_select :author_id, User.all, :id, :email, prompt: true %><br> 
+  </p>
+
+  <p>
+    <%= form.label :completed %>
+    <%= form.check_box :completed, id: :test_completed %>
   </p>
 
   <p><%= form.submit %></p>
