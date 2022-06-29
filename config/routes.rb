@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #resources :users, only: :create
   #resources :sessions, only: :create
 
+  resources :badges, only: :index
   resources :tests, only: :index do
     post :start, on: :member
   end
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   resources :contacts, only: %i[new create]
   
   namespace :admin do
+    resources :badges
     resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member
