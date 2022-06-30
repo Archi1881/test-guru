@@ -6,12 +6,17 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_current_question
+  scope :passed, -> { where('score >= ?', POSITIVE_SCORE) }
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
     save!
+  end
+
+  def update_successfull
+    update(successfull: true)
   end
 
   def passed?
